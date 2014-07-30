@@ -8,7 +8,7 @@ use Acme\DemoBundle\Model\Order;
 /**
  * @author zuo
  */
-class ThreeForTwoDiscount implements DiscountSpecificationIterface {
+class ThreeForTwo implements DiscountSpecificationIterface {
     
     public function apply(Order $order) {
         $categorySizes = $this->countItemsByCategories($order);

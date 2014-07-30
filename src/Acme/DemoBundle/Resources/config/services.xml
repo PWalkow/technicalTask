@@ -8,7 +8,7 @@
         <service id="acme.total_price_counter" class="Acme\DemoBundle\Service\TotalPriceCounter">
         </service>
         
-        <service id="acme.discount.three_for_two" class="Acme\DemoBundle\Service\Discounts\ThreeForTwoDiscount">
+        <service id="acme.discount.three_for_two" class="Acme\DemoBundle\Service\Discounts\ThreeForTwo">
             <tag name="acme.discount" />
         </service>
     </services>

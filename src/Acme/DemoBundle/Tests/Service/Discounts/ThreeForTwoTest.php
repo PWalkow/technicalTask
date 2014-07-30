@@ -6,20 +6,20 @@ use Acme\DemoBundle\Tests\DemoBundleBaseTestCase;
 use Acme\DemoBundle\Model\Order;
 use Acme\DemoBundle\Model\Product;
 use Acme\DemoBundle\Service\DiscountSpecificationIterface;
-use Acme\DemoBundle\Service\Discounts\ThreeForTwoDiscount;
+use Acme\DemoBundle\Service\Discounts\ThreeForTwo;
 
 /**
  * @author zuo
  * 
  * @group unit
  */
-class ThreeForTwoDiscountTest extends DemoBundleBaseTestCase {
+class ThreeForTwoTest extends DemoBundleBaseTestCase {
     
     private $discount;
     
     public function setUp()
     {
-        $this->discount = new ThreeForTwoDiscount();
+        $this->discount = new ThreeForTwo();
     }
     
     public function tearDown() {

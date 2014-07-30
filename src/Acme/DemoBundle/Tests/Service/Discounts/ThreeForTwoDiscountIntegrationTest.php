@@ -3,14 +3,14 @@
 namespace Acme\DemoBundle\Tests\Service\Discounts;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Acme\DemoBundle\Service\Discounts\ThreeForTwoDiscount;
+use Acme\DemoBundle\Service\Discounts\ThreeForTwo;
 
 /**
  * @author zuo
  * 
  * @group integration
  */
-class ThreeForTwoDiscountIntegrationTest extends WebTestCase {
+class ThreeForTwoIntegrationTest extends WebTestCase {
     
     private $client;
     
@@ -28,7 +28,7 @@ class ThreeForTwoDiscountIntegrationTest extends WebTestCase {
     }
     
     /**
-     * @return ThreeForTwoDiscount
+     * @return ThreeForTwo
      */
     private function getService()
     {
