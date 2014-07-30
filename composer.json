@@ -29,7 +29,8 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
-        "phpunit/phpunit": "~4.3"
+        "phpunit/phpunit": "~4.3",
+        "mockery/mockery": "0.9.*@dev"
     },
     "minimum-stability": "dev",
     "scripts": {

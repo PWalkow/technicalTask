@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "19860dfc280d8258d939e2c1c135d59f",
+    "hash": "d0a8c2e9c349ae54598ed859ac45c4d4",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1964,6 +1964,72 @@
     ],
     "packages-dev": [
         {
+            "name": "mockery/mockery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/padraic/mockery.git",
+                "reference": "5c8d5eee9ca58a618d3f7200012b4921fa887729"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/5c8d5eee9ca58a618d3f7200012b4921fa887729",
+                "reference": "5c8d5eee9ca58a618d3f7200012b4921fa887729",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": ">=7.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "hamcrest/hamcrest-php": "~1.1",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.7@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Mockery": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Pádraic Brady",
+                    "email": "padraic.brady@gmail.com",
+                    "homepage": "http://blog.astrumfutura.com"
+                },
+                {
+                    "name": "Dave Marshall",
+                    "email": "dave.marshall@atstsolutions.co.uk",
+                    "homepage": "http://davedevelopment.co.uk"
+                }
+            ],
+            "description": "Mockery is a simple yet flexible PHP mock object framework for use in unit testing with PHPUnit, PHPSpec or any other testing framework. Its core goal is to offer a test double framework with a succint API capable of clearly defining all possible object operations and interactions using a human readable Domain Specific Language (DSL). Designed as a drop in alternative to PHPUnit's phpunit-mock-objects library, Mockery is easy to integrate with PHPUnit and can operate alongside phpunit-mock-objects without the World ending.",
+            "homepage": "http://github.com/padraic/mockery",
+            "keywords": [
+                "BDD",
+                "TDD",
+                "library",
+                "mock",
+                "mock objects",
+                "mockery",
+                "stub",
+                "test",
+                "test double",
+                "testing"
+            ],
+            "time": "2014-07-28 12:51:16"
+        },
+        {
             "name": "ocramius/instantiator",
             "version": "1.0.0",
             "source": {
@@ -2330,12 +2396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8518ba2cb6878a771844f18840460a1de53b93e4"
+                "reference": "89c425e246f68de767078abcea03d616a3991db2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8518ba2cb6878a771844f18840460a1de53b93e4",
-                "reference": "8518ba2cb6878a771844f18840460a1de53b93e4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89c425e246f68de767078abcea03d616a3991db2",
+                "reference": "89c425e246f68de767078abcea03d616a3991db2",
                 "shasum": ""
             },
             "require": {
@@ -2396,7 +2462,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-07-29 13:19:38"
+            "time": "2014-07-30 11:44:04"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2778,7 +2844,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jms/serializer-bundle": 20
+        "jms/serializer-bundle": 20,
+        "mockery/mockery": 20
     },
     "prefer-stable": false,
     "platform": {
