@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d0a8c2e9c349ae54598ed859ac45c4d4",
+    "hash": "dbf54d0917a14751b5a6d1f6e6729549",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -446,12 +446,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "ec984dd37d1b0096deeb0cc8165e7c6ca10273f4"
+                "reference": "03b4890d61580d1bee710445abdf158bb224b251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/ec984dd37d1b0096deeb0cc8165e7c6ca10273f4",
-                "reference": "ec984dd37d1b0096deeb0cc8165e7c6ca10273f4",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/03b4890d61580d1bee710445abdf158bb224b251",
+                "reference": "03b4890d61580d1bee710445abdf158bb224b251",
                 "shasum": ""
             },
             "require": {
@@ -489,12 +489,6 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
                 },
@@ -513,6 +507,10 @@
                 {
                     "name": "Doctrine Project",
                     "homepage": "http://www.doctrine-project.org/"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony2 Bundle for Doctrine Cache",
@@ -521,7 +519,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2014-05-19 14:53:37"
+            "time": "2014-07-30 14:46:58"
         },
         {
             "name": "doctrine/inflector",
@@ -658,12 +656,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "089cca636e0e44a70dd9167b7d813762ea80daca"
+                "reference": "0650bb954f5e8d05776f99abd04c81948413299f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/089cca636e0e44a70dd9167b7d813762ea80daca",
-                "reference": "089cca636e0e44a70dd9167b7d813762ea80daca",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/0650bb954f5e8d05776f99abd04c81948413299f",
+                "reference": "0650bb954f5e8d05776f99abd04c81948413299f",
                 "shasum": ""
             },
             "require": {
@@ -724,7 +722,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-07-24 15:34:21"
+            "time": "2014-07-30 22:06:05"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2396,12 +2394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "89c425e246f68de767078abcea03d616a3991db2"
+                "reference": "ce9e9afbd53283288a5f40fcf4789b7cc1ca5632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89c425e246f68de767078abcea03d616a3991db2",
-                "reference": "89c425e246f68de767078abcea03d616a3991db2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ce9e9afbd53283288a5f40fcf4789b7cc1ca5632",
+                "reference": "ce9e9afbd53283288a5f40fcf4789b7cc1ca5632",
                 "shasum": ""
             },
             "require": {
@@ -2462,7 +2460,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-07-30 11:44:04"
+            "time": "2014-07-30 20:01:24"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2849,7 +2847,7 @@
     },
     "prefer-stable": false,
     "platform": {
-        "php": ">=5.3.3"
+        "php": ">=5.0"
     },
     "platform-dev": [
 

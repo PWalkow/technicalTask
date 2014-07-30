@@ -12,3 +12,5 @@ php app/console acme:discount src/Acme/DemoBundle/Tests/Command/Fixtures/test_2.
 php app/console acme:discount src/Acme/DemoBundle/Tests/Command/Fixtures/test_3.xml
 
 Configuration disabling three_for_two discount has not been made.
+
+Code itself its not ready to be deployed but still working :)
