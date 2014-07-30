@@ -73,8 +73,8 @@ class DiscountCommandTest extends WebTestCase {
     {
         return array(
             array('test_1.xml', '9.98'),
-            array('test_2.xml', '24.43'),
-            array('test_3.xml', '7.73'),
+            array('test_2.xml', '19.44'),
+            array('test_3.xml', '7.74'),
         );
     }
 }

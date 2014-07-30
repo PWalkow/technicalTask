@@ -45,6 +45,13 @@ class TotalPriceCounterTest extends DemoBundleBaseTestCase {
     public function test_count_should_apply_discounts($order)
     {
         $discount = $this->mockDiscount();
+        
+        $discount
+            ->shouldReceive('isSatisfiedBy')
+            ->once()
+            ->with($order)
+            ->andReturn(true);
+        
         $discount
             ->shouldReceive('apply')
             ->with($order)

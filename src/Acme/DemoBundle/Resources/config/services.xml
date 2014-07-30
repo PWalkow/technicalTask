@@ -11,5 +11,9 @@
         <service id="acme.discount.three_for_two" class="Acme\DemoBundle\Service\Discounts\ThreeForTwo">
             <tag name="acme.discount" />
         </service>
+        
+        <service id="acme.discount.conditioner_fifty_off" class="Acme\DemoBundle\Service\Discounts\ConditionerFiftyOff">
+            <tag name="acme.discount" />
+        </service>
     </services>
 </container>

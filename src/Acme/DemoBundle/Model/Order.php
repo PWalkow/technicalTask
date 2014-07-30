@@ -31,11 +31,28 @@ class Order {
     
     /**
      * @param string $category
-     * @return Product
+     * @return Product|null
      */
     public function findCheapestProductForCategory($category)
     {
-        return min($this->findProductsByCategory($category));
+        $productsByCategory = $this->findProductsByCategory($category);
+        
+        if (count($productsByCategory) > 0)
+        {
+            $cheapest = $productsByCategory[0];
+            
+            foreach ($productsByCategory as $product)
+            {
+                if ($cheapest->price > $product->price)
+                {
+                    $cheapest = $product;
+                }
+            }
+            
+            return $cheapest;
+        }
+        
+        return null;
     }
     
     private function findProductsByCategory($category)

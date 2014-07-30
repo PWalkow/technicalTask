@@ -33,7 +33,9 @@ class TotalPriceCounter {
         
         foreach ($this->discounts as $discount)
         {
-            $discount->apply($order);
+            if ($discount->isSatisfiedBy($order)) {
+                $discount->apply($order);
+            }
         }
         
         $this->countTotalPrice($order);
