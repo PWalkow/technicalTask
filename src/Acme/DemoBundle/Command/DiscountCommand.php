@@ -14,28 +14,29 @@ use Acme\DemoBundle\Service\TotalPriceCounter;
  *
  * @author zuo
  */
-class DiscountCommand extends ContainerAwareCommand {
-    
+class DiscountCommand extends ContainerAwareCommand
+{
     const NAME = 'acme:discount';
     const ARGUMENT_FILENAME = 'filename';
-    
+
     /**
      * @var Serializer
      */
     private $serializer;
-    
+
     /**
-     * @var TotalPriceCounter 
+     * @var TotalPriceCounter
      */
     private $totalPriceCounter;
-    
-    protected function initialize(InputInterface $input, OutputInterface $output) {
+
+    protected function initialize(InputInterface $input, OutputInterface $output)
+    {
         $this->serializer = $this->getContainer()->get('jms_serializer');
         $this->totalPriceCounter = $this->getContainer()->get('acme.total_price_counter');
-        
+
         parent::initialize($input, $output);
     }
- 
+
     /**
      * {@inheritdoc}
      */
@@ -46,18 +47,19 @@ class DiscountCommand extends ContainerAwareCommand {
             ->setDescription('Technical test command for discount an order')
             ->addArgument(self::ARGUMENT_FILENAME, InputArgument::REQUIRED, 'File with an xml order.');
     }
-    
-    protected function execute(InputInterface $input, OutputInterface $output) {
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
         $filename = $input->getArgument(self::ARGUMENT_FILENAME);
-        
+
         $order = $this->serializer->deserialize(
             file_get_contents($filename),
             'Acme\DemoBundle\Model\Order',
             'xml'
         );
-                
+
         $totalPrice = $this->totalPriceCounter->count($order);
-        
+
         $output->write($totalPrice);
     }
 }

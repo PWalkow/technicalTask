@@ -13,5 +13,5 @@ class AcmeDemoBundle extends Bundle
         parent::build($container);
 
         $container->addCompilerPass(new DiscountCompilerPass());
-    }    
+    }
 }

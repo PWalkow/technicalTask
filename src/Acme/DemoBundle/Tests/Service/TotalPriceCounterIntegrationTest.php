@@ -7,18 +7,18 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * @author zuo
- * 
+ *
  * @group integration
  */
-class TotalPriceCounterIntegrationTest extends WebTestCase {
-    
+class TotalPriceCounterIntegrationTest extends WebTestCase
+{
     private $client;
-    
+
     public function setUp()
     {
         $this->client = $this->createClient();
     }
-    
+
     public function test_service_existence()
     {
         $this->assertInstanceOf(
@@ -26,7 +26,7 @@ class TotalPriceCounterIntegrationTest extends WebTestCase {
             $this->getService()
         );
     }
-    
+
     /**
      * @return TotalPriceCounter
      */

@@ -24,7 +24,7 @@ class DiscountCompilerPass implements CompilerPassInterface
         $taggedServices = $container->findTaggedServiceIds(
             'acme.discount'
         );
-        
+
         foreach ($taggedServices as $id => $attributes) {
             $definition->addMethodCall(
                 'addDiscountSpecification',

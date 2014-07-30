@@ -7,20 +7,20 @@ use JMS\Serializer\Annotation as JMS;
 /**
  * @author zuo
  */
-class Product {
-    
+class Product
+{
     /**
      * @JMS\Type("string")
      */
     public $category;
-    
-    /** 
+
+    /**
      * @JMS\Type("string")
      * @JMS\XmlAttribute
      */
     public $title;
-    
-    /** 
+
+    /**
      * @JMS\Type("double")
      * @JMS\XmlAttribute
      */

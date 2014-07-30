@@ -7,18 +7,18 @@ use Acme\DemoBundle\Service\Discounts\ConditionerFiftyOff;
 
 /**
  * @author zuo
- * 
+ *
  * @group integration
  */
-class ConditionerFiftyOffIntegrationTest extends WebTestCase {
-    
+class ConditionerFiftyOffIntegrationTest extends WebTestCase
+{
     private $client;
-    
+
     public function setUp()
     {
         $this->client = $this->createClient();
     }
-    
+
     public function test_service_existence()
     {
         $this->assertInstanceOf(
@@ -26,7 +26,7 @@ class ConditionerFiftyOffIntegrationTest extends WebTestCase {
             $this->getService()
         );
     }
-    
+
     /**
      * @return ConditionerFiftyOff
      */

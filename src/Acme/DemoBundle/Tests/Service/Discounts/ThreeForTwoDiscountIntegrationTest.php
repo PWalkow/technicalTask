@@ -7,18 +7,18 @@ use Acme\DemoBundle\Service\Discounts\ThreeForTwo;
 
 /**
  * @author zuo
- * 
+ *
  * @group integration
  */
-class ThreeForTwoIntegrationTest extends WebTestCase {
-    
+class ThreeForTwoDiscountIntegrationTest extends WebTestCase
+{
     private $client;
-    
+
     public function setUp()
     {
         $this->client = $this->createClient();
     }
-    
+
     public function test_service_existence()
     {
         $this->assertInstanceOf(
@@ -26,7 +26,7 @@ class ThreeForTwoIntegrationTest extends WebTestCase {
             $this->getService()
         );
     }
-    
+
     /**
      * @return ThreeForTwo
      */

@@ -3,15 +3,15 @@
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-    
+
     <services>
         <service id="acme.total_price_counter" class="Acme\DemoBundle\Service\TotalPriceCounter">
         </service>
-        
+
         <service id="acme.discount.three_for_two" class="Acme\DemoBundle\Service\Discounts\ThreeForTwo">
             <tag name="acme.discount" />
         </service>
-        
+
         <service id="acme.discount.conditioner_fifty_off" class="Acme\DemoBundle\Service\Discounts\ConditionerFiftyOff">
             <tag name="acme.discount" />
         </service>
