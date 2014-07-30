@@ -2,6 +2,7 @@
 
 namespace Acme\DemoBundle\Tests\Service;
 
+use Acme\DemoBundle\Tests\DemoBundleBaseTestCase;
 use Acme\DemoBundle\Service\TotalPriceCounter;
 use Acme\DemoBundle\Model\Order;
 use Acme\DemoBundle\Model\Product;
@@ -12,7 +13,7 @@ use Acme\DemoBundle\Service\DiscountSpecificationIterface;
  * 
  * @group unit
  */
-class TotalPriceCounterTest extends \PHPUnit_Framework_TestCase {
+class TotalPriceCounterTest extends DemoBundleBaseTestCase {
     
     private $totalPriceCounter;
     
@@ -59,9 +60,9 @@ class TotalPriceCounterTest extends \PHPUnit_Framework_TestCase {
         return array(
             array(
                 $this->mockOrderWithProducts(array(
-                    $this->mockProductWithValue(3),
-                    $this->mockProductWithValue(5),
-                    $this->mockProductWithValue(7),
+                    $this->mockProduct('test', 3),
+                    $this->mockProduct('test',5),
+                    $this->mockProduct('test',7),
                 )),
                 15
             ),
@@ -71,23 +72,5 @@ class TotalPriceCounterTest extends \PHPUnit_Framework_TestCase {
     private function mockDiscount()
     {
         return \Mockery::mock(DiscountSpecificationIterface::class);
-    }
-    
-    private function mockOrderWithProducts(array $products)
-    {
-        $order = \Mockery::mock(Order::class);
-        
-        $order->products = $products;
-        
-        return $order;
-    }
-    
-    private function mockProductWithValue($value)
-    {
-        $product = \Mockery::mock(Product::class);
-        
-        $product->price = $value;
-        
-        return $product;
     }
 }

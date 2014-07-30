@@ -28,4 +28,28 @@ class Order {
     {
         $this->products = new ArrayCollection();
     }
+    
+    /**
+     * @param string $category
+     * @return Product
+     */
+    public function findCheapestProductForCategory($category)
+    {
+        return min($this->findProductsByCategory($category));
+    }
+    
+    private function findProductsByCategory($category)
+    {
+        $products = array();
+        
+        foreach ($this->products as $product)
+        {
+            if ($product->category === $category)
+            {
+                $products[] = $product;
+            }
+        }
+        
+        return $products;
+    }
 }
