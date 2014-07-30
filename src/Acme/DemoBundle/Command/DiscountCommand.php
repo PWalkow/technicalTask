@@ -7,6 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use JMS\Serializer\Serializer;
+use Acme\DemoBundle\Service\TotalPriceCounter;
 
 /**
  * Description of DiscountCommand
@@ -23,8 +24,14 @@ class DiscountCommand extends ContainerAwareCommand {
      */
     private $serializer;
     
+    /**
+     * @var TotalPriceCounter 
+     */
+    private $totalPriceCounter;
+    
     protected function initialize(InputInterface $input, OutputInterface $output) {
         $this->serializer = $this->getContainer()->get('jms_serializer');
+        $this->totalPriceCounter = $this->getContainer()->get('acme.total_price_counter');
         
         parent::initialize($input, $output);
     }
@@ -48,7 +55,9 @@ class DiscountCommand extends ContainerAwareCommand {
             'Acme\DemoBundle\Model\Order',
             'xml'
         );
+                
+        $totalPrice = $this->totalPriceCounter->count($order);
         
-        $output->write($order->total);
+        $output->write($totalPrice);
     }
 }

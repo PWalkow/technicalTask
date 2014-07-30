@@ -11,6 +11,8 @@ class AcmeDemoExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
+        $container->addCompilerPass(new DiscountCompilerPass());
+        
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }

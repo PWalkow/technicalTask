@@ -14,13 +14,15 @@ class Product {
      */
     public $category;
     
-    /**
+    /** 
      * @JMS\Type("string")
+     * @JMS\XmlAttribute
      */
     public $title;
     
-    /**
+    /** 
      * @JMS\Type("double")
+     * @JMS\XmlAttribute
      */
     public $price;
 }

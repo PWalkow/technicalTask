@@ -46,11 +46,10 @@ class TotalPriceCounter {
         $totalPrice = 0;
         
         foreach ($order->products as $product)
-        {
+        {            
             $totalPrice += $product->price;
         }
         
         $order->total = $totalPrice;
     }
-
 }

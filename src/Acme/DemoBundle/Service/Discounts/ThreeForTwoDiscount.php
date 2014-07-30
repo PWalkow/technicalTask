@@ -50,9 +50,4 @@ class ThreeForTwoDiscount implements DiscountSpecificationIterface {
         
         return $categories;
     }
-    
-    protected function setCheapestProductValueToZero(Order $order, $caterory)
-    {
-        
-    }
 }
