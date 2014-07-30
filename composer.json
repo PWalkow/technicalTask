@@ -1,8 +1,15 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "technical test",
+    "type": "test",
+    "description": "Some guys from UK wanted me to write it",
+    "keywords": ["console", "xml", "ordering", "price_counting"],
     "license": "MIT",
-    "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "authors": [
+        {
+            "name": "Piotr Walkow",
+            "email": "walkowpiotr@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
@@ -20,8 +27,10 @@
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "phpunit/phpunit": "~4.3"
     },
+    "minimum-stability": "dev",
     "scripts": {
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
