@@ -49,6 +49,6 @@ class DiscountCommand extends ContainerAwareCommand {
             'xml'
         );
         
-        $output->write('nothing here yet');
+        $output->write($order->total);
     }
 }

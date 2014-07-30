@@ -72,8 +72,8 @@ class DiscountCommandTest extends WebTestCase {
     public function order_filename_provider()
     {
         return array(
-            array('test_1.xml', 9.98),
-            array('test_2.xml', 19.44),
+            array('test_1.xml', '9.98'),
+            array('test_2.xml', '19.44'),
         );
     }
 }
