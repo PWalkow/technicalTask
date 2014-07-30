@@ -14,6 +14,8 @@ class Order {
     /**
      * @JMS\Type("ArrayCollection<Acme\DemoBundle\Model\Product>")
      * @JMS\XmlList(entry="product")
+     * 
+     * @var Product[]
      */
     public $products;
     
