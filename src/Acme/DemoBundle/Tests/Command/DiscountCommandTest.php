@@ -63,7 +63,7 @@ class DiscountCommandTest extends WebTestCase {
     {
         $this->commandTester->execute(array(
             'command' => DiscountCommand::NAME,
-            DiscountCommand::ARGUMENT_FILENAME => $orderFilename
+            DiscountCommand::ARGUMENT_FILENAME => __DIR__ . '/Fixtures/' . $orderFilename
         ));
         
         $this->assertContains($expectedTotalPrice, $this->commandTester->getDisplay());

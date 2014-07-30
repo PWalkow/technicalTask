@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use JMS\Serializer\Serializer;
 
 /**
  * Description of DiscountCommand
@@ -18,6 +19,17 @@ class DiscountCommand extends ContainerAwareCommand {
     const ARGUMENT_FILENAME = 'filename';
     
     /**
+     * @var Serializer
+     */
+    private $serializer;
+    
+    protected function initialize(InputInterface $input, OutputInterface $output) {
+        $this->serializer = $this->getContainer()->get('jms_serializer');
+        
+        parent::initialize($input, $output);
+    }
+ 
+    /**
      * {@inheritdoc}
      */
     protected function configure()
@@ -29,6 +41,14 @@ class DiscountCommand extends ContainerAwareCommand {
     }
     
     protected function execute(InputInterface $input, OutputInterface $output) {
+        $filename = $input->getArgument(self::ARGUMENT_FILENAME);
+        
+        $order = $this->serializer->deserialize(
+            file_get_contents($filename),
+            'Acme\DemoBundle\Model\Order',
+            'xml'
+        );
+        
         $output->write('nothing here yet');
     }
 }
