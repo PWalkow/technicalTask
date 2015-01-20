@@ -31,7 +31,8 @@
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
         "phpunit/phpunit": "~4.3",
-        "mockery/mockery": "0.9.*@dev"
+        "mockery/mockery": "0.9.*@dev",
+        "behat/symfony2-extension": "~2.0"
     },
     "minimum-stability": "dev",
     "scripts": {
