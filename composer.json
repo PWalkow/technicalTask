@@ -25,7 +25,8 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jms/serializer-bundle": "0.13.*@dev"
+        "jms/serializer-bundle": "0.13.*@dev",
+        "behat/behat": "~3.0@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
